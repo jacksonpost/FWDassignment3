@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Grids</title>
+        <link rel="stylesheet" href="assets/css/style_grid.css">
+    </head>
+    <body>
+        <nav class="skip-nav" aria-label="skip links navigation">
+          <a class="skip-link" href="#content">Skip to main content</a>
+          <a class="skip-link" href="#nav">Skip to main navigation</a>
+        </nav>
+        <main>
+        <div class="container" id="content">
+            <div>
+                <h1>Accessibility Techniques &amp; Tools</h1>
+            </div>
+            <div>
+                <h2>Skip Links</h2>
+                <h3>This is our main nav:</h3>
+                <nav id="nav" tabindex="-1" aria-role="navigation">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">About</a></li>
+                    </ul>
+                </nav>
+                <p>But there is another nav list at the very start of the page that can be used to skip to particular elements.  This provides access to important areas of the page immediately, which is important for users who navigate with only a keyboard.</p>
+                <p>We use a few attributes to make this work with screen readers as well as across browsers:</p>
+                <p><span class="yellowtext">aria-label="skip links navigation"</span> in the nav tag, and <span class="yellowtext">tabindex="-1"</span> in the target element.</p> 
+            </div>
+            <div>
+                <h2>Fonts and Typography</h2>
+                <ul>
+                    <li><p>Use real text rather than text within graphics.</p></li>
+                    <li><p>Select basic, simple, easily-readable fonts.</p></li>
+                    <li><p>Use a limited number of fonts.</li>
+                    <li><p>Ensure sufficient contrast between the text and the background.</p></li>
+                    <li><p>Avoid small font sizes.</p></li>
+                    <li><p>Use relative units for font size.</p></li>
+                    <li><p>Limit the use of font variations such as bold, italics, and ALL CAPITAL LETTERS.</p></li>
+                    <li><p>Don't rely only on the appearance of the font (color, shape, font variation, placement, etc.) to convey meaning.</p></li>
+                    <li><p>Avoid blinking or moving text.</p></li>
+                </ul>
+            </div>
+            <div>
+                <h2>WCAG 2.0</h2>
+                <p>These are the guidelines we'll focus on:</p>
+                <ul>
+                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#non-text-content">[1.1.1]</a> – Non-text Content - Provide text alternatives for non-text content</li> 
+                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#info-and-relationships">[1.3.1]</a> – Info and Relationships - Logical structure</li> 
+                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#meaningful-sequence">[1.3.2]</a> – Meaningful Sequence - Present content in a meaningful order</li>
+                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#use-of-color">[1.4.1]</a> – Use of Colour - Don’t use presentation that relies solely on colour</li>
+                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#audio-control">[1.4.2]</a> – Audio Control - Don’t play audio automatically</li>
+                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#keyboard">[2.1.1]</a> – Keyboard - Accessible by keyboard only</li>
+                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#no-keyboard-trap">[2.1.2]</a> – No Keyboard Trap - Don’t trap keyboard users</li> 
+                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#three-flashes-or-below-threshold">[2.3.1]</a> – Three Flashes or Below - No content flashes more than three times per second</li>
+                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#page-titled">[2.4.2]</a> – Page Titled - Use helpful and clear page titles</li>
+                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#focus-order">[2.4.3]</a> – Focus Order - Logical order</li>
+                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#link-purpose-in-context">[2.4.4]</a> – Link Purpose (In Context) - Every link’s purpose is clear from its context</li>
+                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#language-of-page">[3.1.1]</a> – Language of Page - Page has a language assigned</li>
+                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#parsing">[4.1.1]</a> – Parsing - No major code errors</li>
+                </ul>
+                <p>You can find a WCAG checklist here: (https://www.wuhcag.com/wcag-checklist/)</p>
+            </div>
+            <div>
+                <h2>This space left intentionally blank</h2>
+            </div>
+            <div>
+                <h2>ARIA Roles and Labels</h2>
+                <p>The aria-label attribute allows us to specify some text to be used as an accessible label. This overrides other labeling mechanisms, such as a label element.</p>
+                <p><abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles tell users what function an element has within the page. Some common <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles are:</p>
+                <ul>
+                    <li><p>role=”navigation” (e.g., a menu)</p></li>
+                    <li><p>role=”main” (the main content of the page)</p></li>
+                    <li><p>role=”complementary” (e.g., a sidebar)</p></li>
+                    <li><p>role=”contentinfo” (information about the page, e.g., a copyright statement)</p></li>
+                    <li><p>role=”search”</p></li>
+                    <li><p>role=”form”</p></li>
+                </ul>
+                <p>If a role is used more than once on a page, the aria-label attribute should also be used in order to distinguish between the two elements.</p>
+            </div>
+            <div>
+                <h2>Don't Rely on Colour for Meaning</h2>
+                <p>The following is not so easy for users with particular vision impairments.</p>
+                <p>Choose the correct Answer:</p>
+                <p><span class="greentext">Answer</span><span class="redtext">Answer</span></p>
+            </div>
+            <div>
+                <h2>Sq8</h2>
+            </div>
+            <div class="sq_dark">
+                <h2>Contrast</h2>
+                <p>High</p>
+                <p>Medium</p>
+                <p>Low</p>
+            </div>
+        </div>
+        </main>
+    </body>
+</html>
